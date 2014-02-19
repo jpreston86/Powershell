@@ -1,0 +1,234 @@
+# **********************************************************************
+# 
+# Script Name:  ThreeAmigos.ps1 (The Story of the Three Amigos)
+# Author:       Joseph Preston <jpreston1@mail.hodges.edu>
+# Date:         February 5th, 2014
+# 
+# **********************************************************************
+
+## Clear the Windows command console screen
+cls
+
+# Define the variables used in this script to collect player input
+$animal = ""   # Stores the name of an animal supplied by the player
+$vehicle = ""  # Stores the name of a vehicle supplied by the player
+$store = ""    # Stores the name of a store supplied by the player
+$dessert = ""  # Stores the name of a dessert supplied by the player
+$boy = ""     # Stores the name of the boy
+$girl = ""     # Stores the name of the girl
+$girl2 = ""     # Stores the name of the second girl
+
+# Declare functional constants for brevity
+$SIXLINE = "`n`n`n`n`n"
+
+$FOURLINE = "`n`n`n"
+
+# Display the game's opening screen
+$FOURLINE
+write-host "                           T H E   S T O R Y"
+write-host ""
+write-host ""
+write-host ""
+write-host "                 O F   T H E   T H R E E   A M I G O S"
+write-host ""
+write-host ""
+write-host ""
+write-host "                         By Joseph Preston "
+$SIXLINE
+$FOURLINE
+
+write-host " Press Enter to continue."
+
+# Pause script execution and wait for the player to press the Enter key
+Read-Host 
+
+# Clear the Windows command console screen
+cls
+
+# Provide the player with instructions
+$SIXLINE
+write-host "" 
+write-host " This is an interactive mad-lib styled story.  Before it can be"
+write-host ""
+write-host " told, you must answer a few questions."
+$SIXLINE
+$SIXLINE
+write-host ""
+write-host " Press Enter to continue."
+
+# Pause script execution and wait for the player to press the Enter key
+Read-Host
+
+# Ask the player the first question
+while ($animal -eq ""){
+
+    cls # Clear the Windows command console screen
+    
+    $SIXLINE
+    
+    $animal = read-host " Enter the name of a scary animal " 
+    
+}
+
+# Ask the player the second question
+while ($vehicle -eq ""){
+
+    cls # Clear the Windows command console screen
+    
+    $SIXLINE
+    
+    $vehicle = read-host " Enter the name of a transportation vehicle " 
+    
+}
+
+# Ask the player the third question
+while ($store -eq ""){
+
+    cls # Clear the Windows command console screen
+    
+    $SIXLINE
+    
+    $store = read-host " Enter the name of your favorite store " 
+    
+}
+
+# Ask the player the fourth question
+while ($dessert -eq ""){
+
+    cls # Clear the Windows command console screen
+    
+    $SIXLINE
+    
+    $dessert = read-host " Enter the name of your favorite dessert " 
+    
+}
+
+# Ask the player the fifth question
+while ($boy -eq ""){
+
+    cls # Clear the Windows command console screen
+    
+    $SIXLINE
+    
+    $boy = read-host " Enter the name of a boy " 
+    
+}
+
+# Ask the player the sixth question
+while ($girl -eq ""){
+
+    cls # Clear the Windows command console screen
+    
+    $SIXLINE
+    
+    $girl = read-host " Enter the name of a girl " 
+    
+}
+
+# Ask the player the sixth question
+while ($girl2 -eq ""){
+
+    cls # Clear the Windows command console screen
+    
+    $SIXLINE
+    
+    $girl2 = read-host " Enter the name of another girl " 
+    
+}
+
+# Clear the Windows command console screen
+cls
+
+# Provide the player with instructions
+$FOURLINE
+write-host ""
+write-host " Once upon a time there were three very special children"
+write-host " named $boy, $girl, and $girl2. $boy was the oldest"
+write-host " and was known to be brave and strong. $girl2, the youngest,"
+write-host " was just seven years old, yet she posessed an extraordinary"
+write-host " sense of awareness that even the wisest sage would"
+write-host " admire and respect. $girl, the middle child, was both brave"
+write-host " and wise many times beyond her years. They lived together at"
+write-host " the top of a hill, just outside the outskirts of town, where"
+write-host " they faithfully watched over the townsfolk. Always together"
+write-host " and always looking out for eachother and the people in the"
+write-host " town, they were known by everyone as The Three Amigos."
+$SIXLINE
+write-host ""
+write-host " Press Enter to continue."
+
+# Pause script execution and wait for the player to press the Enter key
+Read-Host
+
+# Clear the Windows command console screen
+cls
+
+# Provide the player with instructions
+$SIXLINE
+write-host " One day, which started out no different than any other day, a"
+write-host " great roar was heard from the center of the town. Women and"
+write-host " small children could be seen screaming and running in panic."
+write-host " The Three Amigos climbed to the top of their watch tower and"
+write-host " began scanning the town streets for the source of the noise"
+write-host " and panic. $boy was the first to find the problem,"
+write-host " spotting a gigantic $animal moving quickly towards the"
+write-host " mayor's office. Just ahead of the $animal stood the town's"
+write-host " men, attempting to make a desperate stand."
+write-host " `"Hurry, we must go!`" shouted $girl2. `"The town needs The"
+write-host " Three Amigos!`" In an instant $boy, $girl, and $girl2"
+write-host " jumped into an old $vehicle, scarred and worn by years"
+write-host " of faithful service, and hurriedly raced into town."
+$FOURLINE
+write-host " Press Enter to continue."
+
+# Pause script execution and wait for the player to press the Enter key
+Read-Host
+
+# Clear the Windows command console screen
+cls
+
+# Provide the player with instructions
+$SIXLINE
+write-host " Within minutes The Three Amigos found themselves standing in"
+write-host " the center of Main street. The town was quiet and seemed"
+write-host " almost deserted except for the old $store, where the citizens"
+write-host " had retreated once their last stand had failed. The $animal"
+write-host " was standing in front of the $store, preparing to"
+write-host " break in and kill the good citizens of the town."
+write-host " `"What do we do?`" said $boy. $girl looked around and"
+write-host " saw a pile of $dessert stacked up against the town"
+write-host " barbershop's storefront. `"Follow me,`" yelled $girl,"
+write-host " heading straight for the pile of $dessert. $boy"
+write-host " and $girl2 instantly knew what to do, each grabbing a $dessert"
+write-host " and hurling pieces of $dessert at the $animal. Seeing all of"
+write-host " the delicious $dessert thrown at it, the $animal stopped"
+write-host " it`'s rampage and began eating the food.  Realizing that"
+write-host " the poor $animal was just hungry, The Three Amigos walked"
+write-host " up to it and began petting it."
+write-host ""
+write-host " Press Enter to continue."
+
+# Pause script execution and wait for the player to press the Enter key
+Read-Host
+
+# Clear the Windows command console screen
+cls
+
+# Provide the player with instructions
+$FOURLINE
+write-host ""
+write-host " The townsfolk ran out of the $store and began cheering for"
+write-host " their heroes and their new town mascot, the $animal."
+$SIXLINE
+write-host ""
+write-host ""
+write-host "                       T H E   E N D"
+$SIXLINE
+write-host ""
+write-host " Press Enter to continue."
+
+# Pause script execution and wait for the player to press the Enter key
+Read-Host
+
+# Clear the Windows command console screen
+cls
