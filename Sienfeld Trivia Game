@@ -1,0 +1,316 @@
+# **********************************************************************
+# 
+# Script Name:  SeinfeldTrivia.ps1 (The Seinfeld Trivia Quiz)
+# Version:      2.0
+# Author:       Joseph Preston
+# Date:         February 12, 2014
+# 
+# Description:  This PowerShell script tests the player's knowledge
+#               of Seinfeld trivia through the administration of
+#               a computer quiz made up of 10 questions.
+# 
+# **********************************************************************
+
+# Clear the Windows command console screen
+Clear-Host
+
+# Define the array used in this script to store questions
+$question1 = " What is Kramer`'s first name?"
+$question2 = " What was George`'s favorite pretend career?"
+$question3 = " For whom did Elaine buy white socks?"
+$question4 = " What is Kramer scared of?"
+$question5 = " Where do Jerry`'s parents live?"
+$question6 = " If someone upsets the `"Soup Nazi`", what does he yell?"
+$question7 = " Elaine was not present in the pilot episode?"
+$question8 = " Kramer and George`'s dad design what?"
+$question9 = " What happens when Jerry helps the doorman where Mr. Pitt lives?"
+$question10 = " George`'s secret ATM code that he keeps from Susan but tells Peterman`'s dieing mother is Rosco?"
+
+# Define the array used in this script to store player answers
+$answers = "","","","","","","","","",""
+
+# Define the array used in this script to store valid answers
+$valid = "a","b","c","d"
+
+# Define the array used in this script to store correct answers
+$correctAnswers = "b","d","c","c","d","No soup for you","True","A man's bra","b","False"
+
+# Define a variable to keep track of the number of correctly answered quiz questions
+$noCorrect = 0
+
+# Display the game's opening screen
+Write-Host "`n`n`n`n`t`t W E L C O M E   T O   T H E   S E I N F E L D"
+Write-Host "`n`n`n`t`t`t    T R I V I A    Q U I Z"
+Write-Host "`n`n`n`t`t`t`t    By Joseph Preston"
+Write-Host "`n`n`n`n`n`n`n`n`n`n Press Enter to continue."
+
+# Pause script execution and wait for the player to press the Enter key
+Read-Host
+
+# Clear the Windows Command Console Screen
+Clear-Host
+
+# Provide the player with instructions
+Write-Host "`n`n The Seinfeld Trivia Quiz tests your knowledge of Seinfeld`n"
+Write-Host " trivia. The quiz consists of ten equally weighted multiple`n"
+Write-Host " choice questions. At the end of the quiz your answers will`n"
+Write-Host " be checked and you will be assigned a skill level, using`n"
+Write-Host " the following scale.`n`n"
+Write-Host " `t Score:  10 correct = Jerry   (Expert)"
+Write-Host " `t`t 8-9 correct = Kramer"
+Write-Host " `t`t 6-7 correct = Elaine"
+Write-Host " `t`t 4-5 correct = George"
+Write-Host " `t`t 2-3 correct = Newman"
+Write-Host " `t`t 0-1 correct = Babo   (Clueless)"
+Write-Host "`n`n`n`n Press Enter to continue."
+
+# Pause script execution and wait for the player to press the Enter key
+Read-Host
+
+# Ask the player the first question
+while ($valid -notcontains $answers[0]) {
+ 
+ Clear-Host  # Clear the Windows command console screen
+ 
+ Write-Host 
+ Write-Host $question1
+ Write-Host 
+ Write-Host " A. Peterman"
+ Write-Host " B. Cosmo"
+ Write-Host " C. Puddy"
+ Write-Host " D. Peck"
+ Write-Host 
+ $answers[0] = Read-Host "Type the letter representing the correct" `
+   " answer and press the Enter key."  
+}
+
+# Ask the player the second question
+while ($valid -notcontains $answers[1]) {
+ 
+ Clear-Host  # Clear the Windows command console screen
+  
+ Write-Host 
+ Write-Host $question2
+ Write-Host 
+ Write-Host " A. Bra salesman"
+ Write-Host " B. Real estate"
+ Write-Host " C. City planner"
+ Write-Host " D. Architect"
+ Write-Host 
+ $answers[1] = Read-Host "Type the letter representing the correct" `
+   " answer and press the Enter key."  
+}
+
+# Ask the player the third question
+while ($valid -notcontains $answers[2]) {
+ 
+ Clear-Host  # Clear the Windows command console screen
+ 
+ Write-Host 
+ Write-Host $question3
+ Write-Host 
+ Write-Host " A. Mr. Lippman"
+ Write-Host " B. Mr. Peterman"
+ Write-Host " C. Mr. Pitt"
+ Write-Host " D. Puddy"
+ Write-Host 
+ $answers[2] = Read-Host "Type the letter representing the correct" `
+   " answer and press the Enter key."
+}
+
+# Ask the player the fourth question
+while ($valid -notcontains $answers[3]) {
+ 
+ Clear-Host  # Clear the Windows command console screen
+ 
+ Write-Host 
+ Write-Host $question4 
+ Write-Host
+ Write-Host " A. Swimming"
+ Write-Host " B. Fried chicken"
+ Write-Host " C. Clowns"
+ Write-Host " D. The dentist"
+ Write-Host
+ $answers[3] = Read-Host "Type the letter representing the correct" `
+   " answer and press the Enter key."  
+}
+
+# Ask the player the fifth question
+while ($valid -notcontains $answers[4]) {
+ 
+ Clear-Host  # Clear the Windows command console screen
+ 
+ Write-Host 
+ Write-Host $question5
+ Write-Host 
+ Write-Host " A. Kansas"
+ Write-Host " B. New York"
+ Write-Host " C. California"
+ Write-Host " D. Florida"
+ Write-Host 
+ $answers[4] = Read-Host "Type the letter representing the correct" `
+   " answer and press the Enter key."   
+}
+
+# Ask the player the sixth question
+while ($answers[5] -eq "") {
+ 
+ Clear-Host  # Clear the Windows command console screen
+ 
+ Write-Host 
+ Write-Host $question6
+ Write-Host 
+ $answers[5] = Read-Host "Type the correct answer and press the Enter key."   
+}
+
+# Ask the player the seventh question
+while ($answers[6] -eq "") {
+ 
+ Clear-Host  # Clear the Windows command console screen
+ 
+ Write-Host 
+ Write-Host $question7
+ Write-Host 
+ $answers[6] = Read-Host "Type the correct answer and press the Enter key."   
+}
+
+# Ask the player the eighth question
+while ($answers[7] -eq "") {
+ 
+ Clear-Host  # Clear the Windows command console screen
+ 
+ Write-Host 
+ Write-Host $question8
+ Write-Host 
+ $answers[7] = Read-Host "Type the correct answer and press the Enter key."   
+}
+
+# Ask the player the ninth question
+while ($valid -notcontains $answers[8]) {
+ 
+ Clear-Host  # Clear the Windows command console screen
+ 
+ Write-Host 
+ Write-Host $question9
+ Write-Host 
+ Write-Host " A. There was a fire in the lobby"
+ Write-Host " B. A couch was stolen"
+ Write-Host " C. Jerry gets mugged"
+ Write-Host " D. The elevator broke"
+ Write-Host 
+ $answers[8] = Read-Host "Type the letter representing the correct" `
+   " answer and press the Enter key."   
+}
+
+# Ask the player the tenth question
+while ($answers[9] -eq "") {
+ 
+ Clear-Host  # Clear the Windows command console screen
+ 
+ Write-Host 
+ Write-Host $question10
+ Write-Host 
+ $answers[9] = Read-Host "Type the correct answer and press the Enter key."   
+}
+
+# Clear the Windows command console screen
+Clear-Host
+
+Write-Host 
+Write-Host " OK, now press the Enter key to see how you did."
+
+# Pause script execution and wait for the player to press the Enter key
+Read-Host
+
+# Clear the Windows command console screen
+Clear-Host
+
+# Grade the answers for each quiz question
+if ($answers[0] -eq $correctAnswers[0]) { $noCorrect++ } # The answer to question 1 is "B"
+if ($answers[1] -eq $correctAnswers[1]) { $noCorrect++ } # The answer to question 2 is "D"
+if ($answers[2] -eq $correctAnswers[2]) { $noCorrect++ } # The answer to question 3 is "C"
+if ($answers[3] -eq $correctAnswers[3]) { $noCorrect++ } # The answer to question 4 is "Clowns"
+if ($answers[4] -eq $correctAnswers[4]) { $noCorrect++ } # The answer to question 5 is "B"
+if ($answers[5] -eq $correctAnswers[5]) { $noCorrect++ } # The answer to question 6 is "B"
+if ($answers[6] -eq $correctAnswers[6]) { $noCorrect++ } # The answer to question 7 is "B"
+if ($answers[7] -eq $correctAnswers[7]) { $noCorrect++ } # The answer to question 8 is "B"
+if ($answers[8] -eq $correctAnswers[8]) { $noCorrect++ } # The answer to question 9 is "B"
+if ($answers[9] -eq $correctAnswers[9]) { $noCorrect++ } # The answer to question 10 is "B"
+
+# Assign a ranking based on quiz score
+if (($noCorrect -eq 0) -or ($noCorrect -eq 1)){
+    Write-Host 
+    Write-Host " You got 0-1 questions correct."
+    Write-Host 
+    Write-Host " Your knowledge of Seinfeld trivia is no better than Babo's."
+}
+
+if (($noCorrect -eq 2) -or ($noCorrect -eq 3)) {
+    Write-Host 
+    Write-Host " You got 2-3 question correct."
+    Write-Host 
+    Write-Host " Your knowledge of Seinfeld trivia is no better than" `
+        "Newman's."
+}
+
+if (($noCorrect -eq 4) -or ($noCorrect -eq 5)) {
+    Write-Host 
+    Write-Host " You got 4-5 questions correct."
+    Write-Host 
+    Write-Host " Your knowledge of Seinfeld trivia is approximately that" `
+        "of George's."
+}
+
+if (($noCorrect -eq 6) -or ($noCorrect -eq 7)) {
+    Write-Host 
+    Write-Host " You got 6-7 questions correct."
+    Write-Host 
+    Write-Host " Your knowledge of Seinfeld trivia is approximately that" `
+        "of Elaine's."
+}
+
+if (($noCorrect -eq 8) -or ($noCorrect -eq 9)) {
+    Write-Host 
+    Write-Host " You got 8-9 questions correct."
+    Write-Host 
+    Write-Host " Your knowledge of Seinfeld trivia is about as good as" `
+        "Kramer's."
+}
+
+if ($noCorrect -eq 10) {
+    Write-Host 
+    Write-Host " You got 10 questions correct."
+    Write-Host 
+    Write-Host " Your knowledge of Seinfeld trivia is every bit as good" `
+        "as Jerry's."
+    Write-Host
+}
+
+# Creates question and answer display
+Write-Host " Question 1 was: `n ", $question1 ," `n Your answer was: `n " $answers[0] " `n The correct answer was: `n " $correctAnswers[0] ," `n`n " 
+Write-Host " Question 2 was: `n ", $question2 ," `n Your answer was: `n " $answers[1] ," `n The correct answer was: `n " $correctAnswers[1] ," `n`n " 
+Write-Host " Question 3 was: `n ", $question3 ," `n Your answer was: `n " $answers[2] ," `n The correct answer was: `n " $correctAnswers[2] ," `n`n "
+Write-Host " Question 4 was: `n ", $question4 ," `n Your answer was: `n " $answers[3] ," `n The correct answer was: `n " $correctAnswers[3] ," `n`n "
+Write-Host " Question 5 was: `n ", $question5 ," `n Your answer was: `n " $answers[4] ," `n The correct answer was: `n " $correctAnswers[4] ," `n`n "
+Write-Host " Question 6 was: `n ", $question6 ," `n Your answer was: `n " $answers[5] ," `n The correct answer was: `n " $correctAnswers[5] ," `n`n "
+Write-Host " Question 7 was: `n ", $question7 ," `n Your answer was: `n " $answers[6] ," `n The correct answer was: `n " $correctAnswers[6] ," `n`n "
+Write-Host " Question 8 was: `n ", $question8 ," `n Your answer was: `n " $answers[7] ," `n The correct answer was: `n " $correctAnswers[7] ," `n`n "
+Write-Host " Question 9 was: `n ", $question9 ," `n Your answer was: `n " $answers[8] ," `n The correct answer was: `n " $correctAnswers[8] ," `n`n "
+Write-Host " Question 10 was: `n ", $question10 ," `n Your answer was: `n " $answers[9] ," `n The correct answer was: `n " $correctAnswers[9] ," `n`n"
+
+# Pause the script execution and wait for the player to press the Enter key
+Read-Host
+
+# Clear the Windows command console screen.
+Clear-Host
+
+# Provide the player with instructions
+Write-Host 
+Write-Host " Thanks for taking the Seinfeld Trivia Quiz!"
+
+# Pause script execution and wait for the player to press the Enter key
+Read-Host
+
+
+# Clear the Windows command console screen
+Clear-Host
