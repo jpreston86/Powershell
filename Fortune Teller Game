@@ -1,0 +1,193 @@
+# *************************************************************************
+#
+# Script Name: Preston3-1,3-2.ps1 (PowerShell Fortune Teller)
+# Author: Joseph Preston
+# Date: February 5th, 2014
+#
+# Description: This PowerShell script provides random answers to player
+# questions.
+#
+# *************************************************************************
+
+#Clear the Windows command console screen
+Clear-Host
+
+#Define the variables used in this script to collect player input
+$question = ""  #This variable will store the player's question
+$status = "Play"  #This variable will be used to control game termination
+$answer = 0  #This variable stores a randomly generated number
+$randomNo = New-Object System.Random  #This variable stores a random object
+$time = (Get-Date).Hour  #This variable stores the current hour of the day
+
+#Display the game's opening screen
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host "		W E L C O M E	T O		T H E	W I N D O W S"
+Write-Host
+Write-Host
+Write-Host
+Write-Host "	P O W E R S H E L L		F O R T U N E		T E L L E R"
+Write-Host
+Write-Host
+Write-Host
+Write-Host "					By Joseph Preston"
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host " Press Enter to continue."
+
+#Pause script execution and wait for the player to press the Enter key
+Read-Host
+
+#Clear the Windows command console screen
+Clear-Host
+
+#Provide the player with instructions
+Write-Host
+Write-Host " The fortune teller is a very busy and impatient mystic. Make"
+Write-Host
+Write-Host " your questions brief and simple and only expect to receive"
+Write-Host
+Write-host " Yes / No styled answers."
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host " Press Enter to continue."
+
+#Pause script execution and wait for the player to press the Enter key
+Read-Host
+
+#Continue gameplay until the player decides to stop
+while ($status -ne "Stop") {
+
+#Ask the player the first question
+while ($question -eq ""){
+Clear-Host
+
+#Clear the Windows command console screen
+Write-Host
+$question = read-host " What is your question? "
+}
+$question = ""  #Reset variable to an empty string
+
+$answer = $randomNo.Next(1,5)  #Retrieve a random number between 1 and 4
+
+#Select an answer based on the time and the random number
+
+#If it is the afternoon the fortune teller will be a little cranky
+if (($time -gt 19) -or ($time -lt 6)) {
+Write-Host
+if ($answer -eq 1) { " WHY ARE YOU HERE!?!" }
+if ($answer -eq 2) { " GO AWAY!" }
+if ($answer -eq 3) { " DON'T YOU SLEEP!?!" }
+if ($answer -eq 4) { " NO! NO! NO!" }
+}
+
+#If it is evening to early morning, the fortune teller will be in a horrible mood
+elseif ($time -gt 12) {
+Write-Host
+if ($answer -eq 1) { " Grrrr. The answer is no!" }
+if ($answer -eq 2) { " Grrrr. The answer is never!" }
+if ($answer -eq 3) { " Grrrr. The answer is unclear!" }
+if ($answer -eq 4) { " Grrrr. The answer is yes!" }
+}
+
+#If it is morning, the fortune teller will be in a good mood
+else {
+Write-Host
+if ($answer -eq 1) { " Ah. The answer is yes!" }
+if ($answer -eq 2) { " Ah. The answer is always!" }
+if ($answer -eq 3) { " Ah. The answer is uncertain!" }
+if ($answer -eq 4) { " Ah. The answer is no!" }
+}
+
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host " Press Enter to continue."
+
+#Pause script execution and wait for the player to press the Enter key
+Read-Host
+
+#Clear the Windows command console screen
+Clear-host
+Write-Host
+
+#Prompt the player to continue or quit
+$reply = read-host " Press Enter to ask another question or type Q to quit."
+if ($reply -eq "q") { $status = "Stop" }
+}
+
+Clear the Windows command console screen
+Clear-Host
+
+#Provide the player with instructions
+Write-Host
+Write-Host " Very well then. Please return again to get all your questions"
+Write-Host " answered."
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host
+Write-Host " Press Enter to continue."
+
+#Pause script execution and wait for the player to press the Enter key
+Read-Host
+
+#Clear the Windows command console screen
+Clear-Host
