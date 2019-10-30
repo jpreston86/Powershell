@@ -1,148 +1,41 @@
-clear-host
+function Say-Joke {
+param
+(
+  $Person,$PunchLine
+)
 
-$userReply = ""
+    clear-host
 
-while ($userReply -ne "Who is there?"){
-    $userReply = read-host "Knock Knock!"
-    }
+    do{
+        $userReply = read-host "Knock Knock!"
+    }while ($userReply -ne "Who is there?")
     
-clear-host
+    clear-host
 
-while ($userReply -ne "Cash who"){
-    $userReply = read-host "Cash."
-    }
+    do {
+        $userReply = read-host $person
+    }while ($userReply -ne "$person who?")
     
-clear-host
+    clear-host
 
-write-output "No thanks, but I would like a peanut instead!"
+    write-output $PunchLine
 
-start-sleep -second 5
+    start-sleep -second 5
 
-clear-host
+}
 
-$userReply = ""
 
-while ($userReply -ne "Who is there?"){
-    $userReply = read-host "Knock Knock!"
-    }
-    
-clear-host
-
-while ($userReply -ne "Doris who"){
-    $userReply = read-host "Doris."
-    }
-    
-clear-host
-
-write-output "Doris locked, that's why I'm knocking!"
-
-start-sleep -second 5
-
-clear-host
-
-$userReply = ""
-
-while ($userReply -ne "Who is there?"){
-    $userReply = read-host "Knock Knock!"
-    }
-    
-clear-host
-
-while ($userReply -ne "Madam who"){
-    $userReply = read-host "Madam."
-    }
-    
-clear-host
-
-write-output "Madam foot got caught in the door!"
-
-start-sleep -second 5
-
-clear-host
-
-$userReply = ""
-
-while ($userReply -ne "Who is there?"){
-    $userReply = read-host "Knock Knock!"
-    }
-    
-clear-host
-
-while ($userReply -ne "Cows go who"){
-    $userReply = read-host "Cows go."
-    }
-    
-clear-host
-
-write-output "No, cows go moo!"
-
-start-sleep -second 5
-
-clear-host
-
-$userReply = ""
-
-while ($userReply -ne "Who is there?"){
-    $userReply = read-host "Knock Knock!"
-    }
-    
-clear-host
-
-while ($userReply -ne " Oink oink who"){
-    $userReply = read-host " Oink oink. "
-    }
-    
-clear-host
-
-write-output "Make up your mind, are you a pig or an owl?!"
-
-start-sleep -second 5
-
-clear-host
-
-$userReply = ""
-
-while ($userReply -ne "Who is there?"){
-    $userReply = read-host "Knock Knock!"
-    }
-    
-clear-host
-
-while ($userReply -ne "Honey bee who"){
-    $userReply = read-host "Honey bee."
-    }
-    
-clear-host
-
-write-output "Honey bee a dear and get me a soda!"
-
-start-sleep -second 5
-
-clear-host
-
-$userReply = ""
-
-while ($userReply -ne "Who is there?"){
-    $userReply = read-host "Knock Knock!"
-    }
-    
-clear-host
-
-while ($userReply -ne "Me who"){
-    $userReply = read-host "Me."
-    }
-    
-clear-host
-
-write-output "No, seriously, it's just me. I am telling a knock knock joke."
-
-start-sleep -second 5
-
-clear-host
+Say-Joke -Person "Cash" -PunchLine "No thanks, but I would like a peanut instead!"
+Say-Joke -Person "Doris" -PunchLine "Doris locked, that's why I'm knocking!"
+Say-Joke -Person "Cows go" -PunchLine "No, cows go moo!"
+Say-Joke -Person "Oink oink" -PunchLine "Make up your mind, are you a pig or an owl?!"
+Say-Joke -Person "Honey bee" -PunchLine "Honey bee a dear and get me a soda!"
+Say-Joke -Person "Me" -PunchLine "No, seriously, it's just me. I am telling a knock knock joke."
 
 write-output "The Knock Knock Joke"
 write-output ""
 write-output "Copyright 2014 - Joseph Preston"
+write-output "Copyright 2019 - Andrei Masalov"
 
 start-sleep -second 3
 
